@@ -97,6 +97,7 @@ function calcResult() {
   } else if (unitSum <= 108) {
     ratePerUnit = 50;
     totalSum = ratePerUnit * unitSum;
+    vat.textContent = "";
     totalEnergy.textContent = `${totalSum.toLocaleString("ta-IN")} frs`;
     amount.textContent = `${totalSum.toLocaleString("ta-IN")} frs`;
     rate.textContent = `${ratePerUnit} frs`;
