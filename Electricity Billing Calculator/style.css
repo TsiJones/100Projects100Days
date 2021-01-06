@@ -181,3 +181,9 @@ body {
 .overlay .card .card-foot div:nth-child(2) p {
   text-transform: lowercase;
 }
+
+@media (max-width: 750px) {
+  .container {
+    width: 100%;
+  }
+}
