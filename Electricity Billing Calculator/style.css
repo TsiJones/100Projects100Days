@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 60%;
+  margin: 10rem auto;
+}
+/* color: purple=#8D96DB, card-color=#F6FBFF, blue=#457ECD, green=#01C5DF, input=#D9E6F6,; */
+body {
+  background-color: #e0f0ff;
+  font-family: sans-serif;
+}
+
+.container .card {
+  background-color: #f6fbff;
+  border-radius: 20px;
+  position: relative;
+}
+.card .card-head {
+  background: #8d96db;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+.card .card-body {
+  background: #f6fbff;
+  padding: 1rem 2rem;
+}
+
+.card .card-body p {
+  color: #8d999b;
+  font-size: 12px;
+  padding-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.card .card-body p span {
+  color: #8591e7;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.card .card-body .form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.card .card-body .form label {
+  display: block;
+  padding-bottom: 5px;
+  font-size: 13px;
+  color: #457ecd;
+  font-weight: 600;
+}
+.card .card-body .form input {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+.card .card-body .form input[type="number"] {
+  background: #01c5df;
+}
+.card .card-body .form input[type="text"],
+.card .card-body .form input[type="date"] {
+  background: #87b3f0;
+}
+.card .card-foot button {
+  background: #327ee7;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 0 20px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  transition: all 0.4s ease-out;
+}
+.card .card-foot button:hover {
+  background-color: #145ec5;
+}
+
+/* overlay */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translate(0, -200%);
+  transition: 0.5s ease;
+}
+.show {
+  transform: translate(0, 0);
+}
+.overlay .card .card-head {
+  position: relative;
+}
+
+.overlay .card .card-head span {
+  position: absolute;
+  right: 30px;
+  top: 7px;
+  font-size: 45px;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+.overlay .card .card-head span:hover {
+  color: #01c5df;
+}
+
+.overlay .card .card-body {
+  background-color: #f6fbff;
+}
+
+.overlay .card .card-body .box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.overlay .card .card-body .box > div {
+  display: block;
+  background: #fff;
+  color: #327ee7;
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.overlay .card .card-body .box > div h4,
+.overlay .card .card-body .box > div p {
+  padding-top: 1rem;
+}
+
+.overlay .card .card-body .box > div p {
+  font-size: 16px;
+}
+
+.overlay .card .card-foot {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+
+.overlay .card .card-foot h4 {
+  padding: 5px 0;
+}
+
+.overlay .card .card-foot div:nth-child(1) {
+  background: #327ee7;
+  color: #fff;
+  border-radius: 0 0 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.5rem;
+}
+
+.overlay .card .card-foot div:nth-child(2) {
+  background: #01c5df;
+  color: #fff;
+  border-radius: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.5rem;
+}
+.overlay .card .card-foot div:nth-child(2) p {
+  text-transform: lowercase;
+}
